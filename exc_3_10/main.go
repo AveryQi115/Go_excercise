@@ -22,6 +22,9 @@ func comma(s string) string {
 	var buf bytes.Buffer
 
 	start := len(s)%3
+	if start == 0{
+		start = 3
+	}
 	buf.WriteString(s[:start])
 
 	for ;start+3<=len(s);start+=3{
